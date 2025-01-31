@@ -1,5 +1,7 @@
 package model;
 
+
+
 public class Revista extends Livro{
     private int volume;
     private int numero;
@@ -7,7 +9,7 @@ public class Revista extends Livro{
         super(titulo, autor, ano); //chama o contrutor da super classe
         this.volume= volume;
         this.numero= numero;
-
+        this.modelo= "Revista";
     }
 
     public int getVolume(){
@@ -24,5 +26,15 @@ public class Revista extends Livro{
 
     public void setNumero(int numero){
         this.numero= numero;
+    }
+
+    public String getAtributos(){
+        return "Revista{" +
+                "titulo='" + this.getTitulo() + '\'' +
+                ", autor='" + this.getAutor() + '\'' +
+                ", ano="+ this.getAno() +
+                ", volume=" + volume +
+                ", numero=" + numero +
+                '}';
     }
 }

@@ -4,6 +4,7 @@ public class Livro {
     private String titulo;
     private String autor;
     private int ano;
+    public String modelo = "Livro";
 
     public Livro(String titulo,String autor,int ano){
         this.titulo = titulo;
