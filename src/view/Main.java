@@ -33,7 +33,17 @@ public class Main {
             }
         });
 
+        JButton AdicionarLivro = new JButton("Adicionar Livro");
+        AdicionarLivro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JanelaMain.setVisible(false);
+                new LivroView(ListaLivro,JanelaMain);
+            }
+        });
+
         JanelaMain.add(AdicionarRevista);
+        JanelaMain.add(AdicionarLivro);
 
         JanelaMain.setVisible(true);
 
