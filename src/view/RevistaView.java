@@ -8,11 +8,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import controller.RevistaController;
+import model.Livro;
 import model.Revista;
 
 
 public class RevistaView{
-    public RevistaView(ArrayList<Revista> listaObjetos,JFrame JanelaMain){ //construtor
+    public RevistaView(ArrayList<Livro> listaObjetos, JFrame JanelaMain){ //construtor
         
         JFrame jframe = new JFrame();
         jframe.setSize(800,500);
@@ -48,6 +49,12 @@ public class RevistaView{
                     int ano = Integer.parseInt(anoField.getText());
                     int numero = Integer.parseInt(numeroField.getText());
                     int volume = Integer.parseInt(volumeField.getText());
+
+                    tituloField.setText("");
+                    autorField.setText("");
+                    anoField.setText("");
+                    numeroField.setText("");
+                    volumeField.setText("");
 
                     controller.adicionaRevista(titulo, organizacao, ano, volume, numero, listaObjetos);
 

@@ -36,4 +36,16 @@ public class Livro {
         this.ano = ano;
     }
 
+    public String getModelo(){
+        return this.modelo;
+    }
+
+    public String getAributos(){
+        return "Revista{" +
+                "titulo='" + this.getTitulo() + '\'' +
+                ", autor='" + this.getAutor() + '\'' +
+                ", ano="+ this.getAno() +
+                '}';
+    }
+
 }

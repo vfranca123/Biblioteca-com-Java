@@ -36,7 +36,9 @@ public class LivroView {
                     String titulo = tituloField.getText();
                     String autor = autorField.getText();
                     int ano = Integer.parseInt(anoField.getText());
-
+                    tituloField.setText("");
+                    autorField.setText("");
+                    anoField.setText("");
                     controller.AdicionaLivro(titulo, autor, ano, ListaLivro);
 
                 }catch (NumberFormatException ex) {

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class RevistaController
 {
-    public void adicionaRevista(String titulo, String organizacao, int ano, int volume, int numero, ArrayList<Revista> lista) {
+    public void adicionaRevista(String titulo, String organizacao, int ano, int volume, int numero, ArrayList<Livro> lista) {
         Revista revista = new Revista(titulo, organizacao, ano, volume, numero);
         lista.add(revista);
 
