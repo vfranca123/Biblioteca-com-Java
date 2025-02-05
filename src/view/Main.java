@@ -13,13 +13,14 @@ public class Main {
         ArrayList<Livro> listaMateriais = new ArrayList<>();
 
         JFrame janelaMain = new JFrame();
+        JLabel Listagem = new JLabel("Listagem");
         janelaMain.setSize(800, 500);
         janelaMain.setTitle("Biblioteca");
         janelaMain.setLocationRelativeTo(null);
         janelaMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janelaMain.setLayout(new BorderLayout());
 
-        // Painel principal
+                // Painel principal
         JPanel painelBotoes = new JPanel();
         painelBotoes.setLayout(new GridLayout(1, 2, 10, 10));
 
@@ -80,10 +81,12 @@ public class Main {
         });
 
         painelListagem.add(scrollPane, BorderLayout.CENTER);
-        painelListagem.add(btnAtualizar, BorderLayout.SOUTH);
+        painelListagem.add(Listagem, BorderLayout.NORTH);
+
+        painelBotoes.add(btnAtualizar);
 
         // Adiciona os painéis na janela principal
-        janelaMain.add(painelBotoes, BorderLayout.NORTH);
+        janelaMain.add(painelBotoes, BorderLayout.SOUTH);
         janelaMain.add(painelListagem, BorderLayout.CENTER);
 
         janelaMain.setVisible(true);
