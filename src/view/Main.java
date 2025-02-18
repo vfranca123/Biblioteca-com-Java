@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Livro> listaMateriais = new ArrayList<>();
+        ArrayList<Conteudo> listaMateriais = new ArrayList<>();
 
         JFrame janelaMain = new JFrame();
         JLabel Listagem = new JLabel("Listagem");
@@ -57,25 +57,9 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 txtLista.setText(""); // Limpa antes de listar
-                for (Livro material : listaMateriais) {
-                    if (material instanceof Revista) {
-                        Revista revista = (Revista) material; // Faz o cast para Revista
-                        txtLista.append(
-                                revista.getModelo()+ "  "+
-                                "Título: " + revista.getTitulo() +
-                                " - Autor: " + revista.getAutor() +
-                                " - Ano: " + revista.getAno() +
-                                " - Volume: " + revista.getVolume() +
-                                "- Numero" +revista.getNumero()+"\n"
-                                );
-                    } else {
-                        txtLista.append(
-                                material.getModelo()+ "  "+
-                                "Título: " + material.getTitulo() +
-                                " - Autor: " + material.getAutor() +
-                                " - Ano: " + material.getAno() + "\n"
-                                );
-                    }
+                for (Conteudo material : listaMateriais) {
+                        txtLista.append(material.getAtributos());
+
                 }
             }
         });

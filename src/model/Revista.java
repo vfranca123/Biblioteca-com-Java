@@ -1,8 +1,7 @@
 package model;
 
 
-
-public class Revista extends Livro{
+public class Revista extends Conteudo{
     private int volume;
     private int numero;
     public Revista(String titulo, String autor, int ano,int volume,int numero) {
@@ -29,12 +28,11 @@ public class Revista extends Livro{
     }
 
     public String getAtributos(){
-        return "Revista{" +
+        return "Revista  " +
                 "titulo='" + this.getTitulo() + '\'' +
                 ", autor='" + this.getAutor() + '\'' +
                 ", ano="+ this.getAno() +
                 ", volume=" + volume +
-                ", numero=" + numero +
-                '}';
+                ", numero=" + numero + "\n" ;
     }
 }

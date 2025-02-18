@@ -8,12 +8,13 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import controller.RevistaController;
+import model.Conteudo;
 import model.Livro;
 import model.Revista;
 
 
 public class RevistaView{
-    public RevistaView(ArrayList<Livro> listaObjetos, JFrame JanelaMain){ //construtor
+    public RevistaView(ArrayList<Conteudo> listaObjetos, JFrame JanelaMain){ //construtor
 
         // Criando a janela principal
         JFrame jframe = new JFrame("Adicionar Revista");

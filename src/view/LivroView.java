@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import controller.LivroController;
 import model.*;
 public class LivroView {
-    public LivroView(ArrayList<Livro> listaLivro, JFrame janelaMain) {
+    public LivroView(ArrayList<Conteudo> listaLivro, JFrame janelaMain) {
         // Criando a janela principal
         JFrame jframe = new JFrame("Adicionar Livro");
         jframe.setSize(500, 400);
