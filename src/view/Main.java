@@ -33,6 +33,15 @@ public class Main {
             }
         });
 
+        JButton adicionarFilme = new JButton("Adicionar Filme");
+        adicionarRevista.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                janelaMain.setVisible(false);
+                new FilmeView(listaMateriais, janelaMain);
+            }
+        });
+
         JButton adicionarLivro = new JButton("Adicionar Livro");
         adicionarLivro.addActionListener(new ActionListener() {
             @Override
@@ -44,6 +53,7 @@ public class Main {
 
         painelBotoes.add(adicionarRevista);
         painelBotoes.add(adicionarLivro);
+        painelBotoes.add(adicionarFilme);
 
         //  Painel de Listagem
         JPanel painelListagem = new JPanel(new BorderLayout());
